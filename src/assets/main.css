@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color-primary);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+
+.app-wace__container {
+  max-width: 1880px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+:root {
+  --background-color-primary: #030407;
+  --background-color-hover: #ffffff;
+  --background-color-secondary: #090b16;
+  --background-color-luna: #ffffff;
+  --background-color-ul: rgba(255, 255, 255, 0.05);
+  --accent-color: #cacaca;
+  --text-primary-color: white;
+  --text-color: white;
+  --text-color-hover: rgb(0, 0, 0);
+  --text-color-h1: rgb(255, 255, 255);
+  --text-color-h2: rgba(255, 255, 255, 0.5);
+  --element-size: 4rem;
+}
+
+:root.dark-theme {
+  --background-color-primary: #e9e9e9;
+  --background-color-hover: #202020;
+  --background-color-secondary: #2d2d30;
+  --background-color-luna: #000000;
+  --background-color-ul: rgb(0, 0, 0);
+  --accent-color: #3f3f3f;
+  --text-primary-color: #ddd;
+  --text-color: rgb(0, 0, 0);
+  --text-color-hover: rgb(255, 255, 255);
+  --text-color-h1: rgb(0, 0, 0);
+  --text-color-h2: rgba(0, 0, 0, 0.5);
+}
