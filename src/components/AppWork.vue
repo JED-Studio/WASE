@@ -7,22 +7,7 @@ export default defineComponent({
       {
         id: 1,
         text: 'Платформа для Российского венчурного бизнеса',
-        image: '/public/project.png',
-      },
-      {
-        id: 2,
-        text: 'Платформа для Российского венчурного бизнеса',
-        image: '/public/project.png',
-      },
-      {
-        id: 3,
-        text: 'Платформа для Российского венчурного бизнеса',
-        image: '/public/project.png',
-      },
-      {
-        id: 4,
-        text: 'Платформа для Российского венчурного бизнеса',
-        image: '/public/project.png',
+        image: 'image/apteka.png',
       },
     ])
 
@@ -46,7 +31,7 @@ export default defineComponent({
             v-for="item in items"
             :key="item.id"
             :to="{ name: 'project', params: { id: item.id } }"
-            class="app-work__item"
+            class="app-work__item border border-slate-100 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
           >
             <div class="app-work__img">
               <img :src="item.image" alt="" />
@@ -119,5 +104,11 @@ h4 {
   background: white;
   border-radius: 20px;
   border: 1px solid gray;
+}
+
+@media (max-width: 768px) {
+  .app-work__items {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>

@@ -58,6 +58,7 @@ export default defineComponent({
   font-size: 3.75rem;
   font-weight: 600;
   line-height: normal;
+  text-align: center;
 }
 
 .app-achievements__item > p {
@@ -66,5 +67,13 @@ export default defineComponent({
   font-weight: 500;
   line-height: normal;
   max-width: 220px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .app-achievements {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 </style>

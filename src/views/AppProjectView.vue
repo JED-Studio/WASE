@@ -1,44 +1,12 @@
 <script>
 import { defineComponent, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import projectsDate from '../date/projects.json'
 
 export default defineComponent({
   setup() {
     const route = useRoute()
-    const projects = ref([
-      {
-        id: 1,
-        title: 'Единая платформа создания сайтов для министерства связи РД',
-        category: 'Платформа',
-        image: '/public/web.png',
-        description: 'Описание проекта 1',
-        aboutProject: 'Информация о проекте 1',
-        featuresProject: 'Особенности проекта 1',
-        task: 'Задача проекта 1',
-        titleDecision: 'Решение проекта 1',
-        descriptionDecision: 'Описание решения 1',
-        linkDecision: 'Ссылка на решение 1',
-        textDesign: 'Дизайн проекта 1',
-        textTexnology: 'Технологии проекта 1',
-        textResult: 'Результат проекта 1',
-      },
-      {
-        id: 2,
-        title: 'Пидор',
-        category: 'Платформа',
-        image: '/public/project.png',
-        description: 'Описание проекта 1',
-        aboutProject: 'Информация о проекте 1',
-        featuresProject: 'Особенности проекта 1',
-        task: 'Задача проекта 1',
-        titleDecision: 'Решение проекта 1',
-        descriptionDecision: 'Описание решения 1',
-        linkDecision: 'Ссылка на решение 1',
-        textDesign: 'Дизайн проекта 1',
-        textTexnology: 'Технологии проекта 1',
-        textResult: 'Результат проекта 1',
-      },
-    ])
+    const projects = ref(projectsDate)
 
     const project = ref(null)
 
@@ -69,28 +37,30 @@ export default defineComponent({
           </div>
         </div>
 
-        <div>
+        <div class="app-project__about">
           <h3>О проекте</h3>
           <p>{{ project.aboutProject }}</p>
         </div>
-        <div>
+        <!--<div class="app-project__features">
           <h3>Особенности проекта</h3>
           <p>{{ project.featuresProject }}</p>
           <p>{{ project.featuresProject }}</p>
           <p>{{ project.featuresProject }}</p>
-        </div>
-        <div>
+        </div>-->
+        <div class="app-project__task">
           <h3>Задача</h3>
-          <p>{{ project.task }}</p>
-          <p>{{ project.task }}</p>
+          <p>{{ project.task1 }}</p>
+          <p>{{ project.task2 }}</p>
+          <p>{{ project.task3 }}</p>
+          <p>{{ project.task4 }}</p>
         </div>
-        <div>
+        <!--  <div class="app-project__solution">
           <h3>Решение</h3>
           <p>{{ project.titleDecision }}</p>
           <p>{{ project.descriptionDecision }}</p>
           <p>{{ project.linkDecision }}</p>
         </div>
-        <div>
+        <div class="app-project__design">
           <h3>Дизайн</h3>
           <p>{{ project.textDesign }}</p>
         </div>
@@ -113,14 +83,15 @@ export default defineComponent({
             <p>Наведение</p>
           </div>
         </div>
-        <div>
+        <div class="app-project__technologies">
           <h3>Выбор оптимальных технологий</h3>
           <p>{{ project.textTexnology }}</p>
         </div>
-        <div>
+        <div class="app-project__result">
           <h3>Результат работы</h3>
           <p>{{ project.textResult }}</p>
         </div>
+        -->
       </div>
     </div>
   </div>
@@ -131,6 +102,23 @@ export default defineComponent({
   display: flex;
   background-color: white;
   border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.app-project__about {
+  margin-bottom: 20px;
+}
+
+.app-project__features {
+  margin-bottom: 20px;
+}
+
+.app-project__task {
+  margin-bottom: 20px;
+}
+
+.app-project__solution {
+  margin-bottom: 20px;
 }
 
 .app-project__text {
@@ -152,5 +140,24 @@ export default defineComponent({
   flex: 50%;
   background-color: yellowgreen;
   border-radius: 20px;
+}
+
+.app-project__about,
+.app-project__features,
+.app-project__task,
+.app-project__solution,
+.app-project__design,
+.app-project__result,
+.app-project__technologies > h3 {
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 35px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 28px;
 }
 </style>

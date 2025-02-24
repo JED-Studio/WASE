@@ -15,10 +15,11 @@ export default defineComponent({
           <div class="app-basicinfo__logo">
             Профессиональная разработка Web-проектов и Мобильных приложений для бизнеса и стартапов
           </div>
-          <div></div>
         </div>
         <div class="app-basicinfo__right">
-          <img width="400" height="400" src="/public/WACE.png" alt="" />
+          <video autoplay loop muted class="app-basicinfo__video">
+            <source src="/public/image/0001-0120.webm" type="video/webm" />
+          </video>
         </div>
       </div>
     </div>
@@ -38,6 +39,8 @@ export default defineComponent({
     flex: 50%;
   }
   &__right {
+    display: flex;
+    justify-content: center;
     flex: 50%;
   }
 }
@@ -48,5 +51,17 @@ export default defineComponent({
   line-height: 71px;
   color: #000000;
   max-width: 1000px;
+}
+
+@media (max-width: 768px) {
+  .app-basicinfo__logo {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.6rem;
+    line-height: 50px;
+  }
+  .app-basicinfo__right {
+    display: none;
+  }
 }
 </style>

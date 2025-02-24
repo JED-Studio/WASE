@@ -19,17 +19,17 @@
         {
           id: 1,
           text: 'Платформа для Российского венчурного бизнеса',
-          image: '/public/project.png',
+          image: 'image/project.png',
         },
         {
           id: 2,
           text: 'Проект 2',
-          image: '/public/project2.png',
+          image: 'image/project2.png',
         },
         {
           id: 3,
           text: 'Проект 3',
-          image: '/public/project3.png',
+          image: 'image/project3.png',
         },
         // Добавьте другие проекты с уникальными идентификаторами...
       ]
