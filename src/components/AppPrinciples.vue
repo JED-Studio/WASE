@@ -2,10 +2,9 @@
   <div class="app-principles__section">
     <div class="app-wace__container">
       <div class="app-principles">
-        <h2>Принципы работы</h2>
         <div class="app-principles__items">
           <div
-            class="app-principles__item border border-slate-100 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
+            class="app-principles__item cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
           >
             <img src="" alt="" />
             <h3>Product Market Fit</h3>
@@ -15,7 +14,7 @@
             </p>
           </div>
           <div
-            class="app-principles__item border border-slate-100 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
+            class="app-principles__item cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
           >
             <img src="" alt="" />
             <h3>AARRR</h3>
@@ -25,7 +24,7 @@
             </p>
           </div>
           <div
-            class="app-principles__item border border-slate-100 cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
+            class="app-principles__item cursor-pointer transition hover:-translate-y-2 hover:shadow-xl"
           >
             <img src="" alt="" />
             <h3>Expansion Stage</h3>
@@ -51,7 +50,7 @@
 }
 
 .app-principles__item {
-  background-color: white;
+  background-color: var(--background-color-secondary);
   padding: 20px;
   border-radius: 20px;
 }
@@ -66,14 +65,6 @@
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 24px;
-}
-
-.app-principles > h2 {
-  margin-bottom: 20px;
-  font-weight: 500;
-  font-size: 1.5rem;
-  line-height: 28px;
-  color: black;
 }
 
 @media (max-width: 768px) {

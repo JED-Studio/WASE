@@ -29,8 +29,9 @@ export default defineComponent({
   border-right: 3px solid #000000;
   font-size: 2.5rem;
   font-weight: 500;
-
+  padding: 10px 5px 10px 0;
   white-space: nowrap;
+  color: var(--text-color);
 }
 
 .app-company__section {

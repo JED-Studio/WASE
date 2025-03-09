@@ -1,7 +1,7 @@
 <script>
 import { defineComponent, ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
-import projectsDate from '../date/projects.json'
+import projectsDate from '../date/projectsDescription.json'
 
 export default defineComponent({
   setup() {

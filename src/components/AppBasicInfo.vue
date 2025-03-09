@@ -1,8 +1,11 @@
 <script>
+import AppButtonWrite from './Button/AppButtonWrite.vue'
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  components: {},
+  components: {
+    AppButtonWrite,
+  },
   setup() {},
 })
 </script>
@@ -15,6 +18,8 @@ export default defineComponent({
           <div class="app-basicinfo__logo">
             Профессиональная разработка Web-проектов и Мобильных приложений для бизнеса и стартапов
           </div>
+
+          <AppButtonWrite />
         </div>
         <div class="app-basicinfo__right">
           <video autoplay loop muted class="app-basicinfo__video">
@@ -46,11 +51,13 @@ export default defineComponent({
 }
 
 .app-basicinfo__logo {
+  letter-spacing: -0.05em;
+  line-height: 0.9;
   font-weight: 700;
-  font-size: 3.6rem;
-  line-height: 71px;
-  color: #000000;
+  font-size: 4.6rem;
+  color: var(--text-color);
   max-width: 1000px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 768px) {

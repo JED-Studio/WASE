@@ -81,8 +81,8 @@ export default {
 
 .switch-label {
   align-items: center;
-  background: var(--text-primary-color);
-  border: calc(var(--element-size) * 0.025) solid var(--accent-color);
+  background: var(--switch-color);
+  border: calc(var(--element-size) * 0.025) solid var(--switch-border);
   border-radius: var(--element-size);
   cursor: pointer;
   display: flex;
@@ -98,7 +98,7 @@ export default {
 
 .switch-toggle {
   position: absolute;
-  background-color: var(--background-color-primary);
+  background-color: var(--background-color-secondary);
   border-radius: 50%;
   top: 2.5px;
   left: 0px;
@@ -115,6 +115,6 @@ export default {
 }
 
 #luna {
-  stroke: var(--background-color-luna);
+  stroke: var(--switch-color);
 }
 </style>

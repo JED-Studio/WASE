@@ -86,7 +86,7 @@ export default defineComponent({
 }
 
 .app-footer__section {
-  background-color: white;
+  background-color: var(--background-color-secondary);
 }
 
 .app-footer {

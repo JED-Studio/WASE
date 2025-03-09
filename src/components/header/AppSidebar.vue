@@ -26,11 +26,6 @@ export default defineComponent({
         <li><RouterLink to="/projects">Проекты</RouterLink></li>
       </ul>
     </nav>
-    <div class="app-header__social-sidebar">
-      <a href=""><img width="30" src="/public/svg/instagram.svg" alt="" /></a>
-      <a href=""><img width="30" src="/public/svg/telegram.svg" alt="" /></a>
-      <a href=""><img width="30" src="/public/svg/whatsapp.svg" alt="" /></a>
-    </div>
   </div>
 </template>
 
@@ -76,17 +71,5 @@ export default defineComponent({
 .app-header__sidebar nav ul li:hover {
   background-color: #202020;
   color: white;
-}
-.app-header__social-sidebar {
-  display: block;
-}
-.app-header__social {
-  display: none;
-}
-
-.app-header__social-sidebar {
-  display: flex;
-  align-items: center;
-  gap: 10px;
 }
 </style>

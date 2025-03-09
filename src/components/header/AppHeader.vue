@@ -1,10 +1,14 @@
 <script>
 import { defineComponent, ref } from 'vue'
 import AppSidebar from './AppSidebar.vue'
+import AppSwitch from '../AppSwitch.vue'
+import LogoIcon from '../icons/LogoIcon.vue'
 
 export default defineComponent({
   components: {
     AppSidebar,
+    AppSwitch,
+    LogoIcon,
   },
   setup() {
     const open = ref(false)
@@ -27,7 +31,7 @@ export default defineComponent({
       <div class="app-header">
         <div class="app-header__left">
           <RouterLink class="app-header__logo" to="/">
-            <img width="60" height="60" src="/public/image/вектор.svg" alt="" />
+            <LogoIcon />
           </RouterLink>
           <div class="app-header__block">
             <nav>
@@ -35,6 +39,7 @@ export default defineComponent({
                 <li><RouterLink to="/about">О нас</RouterLink></li>
                 <li><RouterLink to="/services">Услуги</RouterLink></li>
                 <li><RouterLink to="/projects">Проекты</RouterLink></li>
+                <li><RouterLink to="/projects">Команда</RouterLink></li>
               </ul>
             </nav>
           </div>
@@ -42,16 +47,10 @@ export default defineComponent({
 
         <div class="app-header__right">
           <div class="app-header__lang"></div>
-          <div class="app-header__switch"></div>
-          <div class="app-header__social">
-            <a href="https://instagram.com/waceio">
-              <img width="30" src="/public/svg/instagram.svg" alt="" />
-            </a>
-            <a href="https://t.me/waceiu ">
-              <img width="30" src="/public/svg/telegram.svg" alt="" />
-            </a>
-            <a href=""> <img width="30" src="/public/svg/whatsapp.svg" alt="" /></a>
+          <div class="app-header__switch">
+            <AppSwitch />
           </div>
+
           <div class="app-header__menu">
             <img width="30" height="30" src="/public/svg/icons8-menu.svg" alt="" @click="option" />
           </div>
@@ -63,16 +62,6 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-.app-header__social {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.app-header__social-sidebar {
-  display: none;
-}
-
 .app-header__shadow {
   margin-bottom: 100px;
 }
@@ -90,14 +79,14 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 99999;
+  z-index: 9998;
 }
 
 .app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
+  background-color: var(--background-color-secondary);
   padding: 14px 20px;
   border-radius: 20px;
   box-shadow: 0 5px 5px 0 #00000017;
@@ -129,7 +118,7 @@ header {
   font-weight: 700;
   font-size: 14px;
   margin-right: 24px;
-  color: #202020;
+  color: var(--text-color);
 }
 
 .app-header__menu > img {
@@ -142,10 +131,6 @@ header {
   }
 
   .app-header__block nav ul li {
-    display: none;
-  }
-
-  .app-header__social {
     display: none;
   }
 }

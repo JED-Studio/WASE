@@ -3,9 +3,8 @@
 body {
   padding: 0px;
   margin: 0px;
-
-  background-color: #e9e9e9;
-  font-family: 'Exo 2', serif;
+  background-color: var(--background-color-primary);
+  font-family: 'PT Root UI';
 }
 
 *,
@@ -23,7 +22,9 @@ h6,
 p {
   margin: 0px;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 .app-wace__container {
   max-width: 1880px;
   margin: 0 auto;
@@ -32,30 +33,53 @@ p {
 }
 
 :root {
-  --background-color-primary: #030407;
-  --background-color-hover: #ffffff;
-  --background-color-secondary: #090b16;
-  --background-color-luna: #ffffff;
-  --background-color-ul: rgba(255, 255, 255, 0.05);
-  --accent-color: #cacaca;
-  --text-primary-color: white;
-  --text-color: white;
-  --text-color-hover: rgb(0, 0, 0);
-  --text-color-h1: rgb(255, 255, 255);
-  --text-color-h2: rgba(255, 255, 255, 0.5);
+  --background-color-primary: #1a1a1a;
+  --background-color-secondary: #242424;
+  --text-color: #ffffffde;
+  --switch-color: #ffffff;
+  --switch-border: #242424;
   --element-size: 4rem;
 }
 
 :root.dark-theme {
   --background-color-primary: #e9e9e9;
-  --background-color-hover: #202020;
-  --background-color-secondary: #2d2d30;
-  --background-color-luna: #000000;
-  --background-color-ul: rgb(0, 0, 0);
-  --accent-color: #3f3f3f;
-  --text-primary-color: #ddd;
+  --background-color-secondary: white;
+  --switch-color: #242424;
+  --switch-border: white;
   --text-color: rgb(0, 0, 0);
-  --text-color-hover: rgb(255, 255, 255);
-  --text-color-h1: rgb(0, 0, 0);
-  --text-color-h2: rgba(0, 0, 0, 0.5);
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('@/assets/fonts/PT-Root-UI_Regular.ttf') format('opentype');
+  font-weight: normal; /* 400 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('@/assets/fonts/PT-Root-UI_Bold.ttf') format('opentype');
+  font-weight: bold; /* 700 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('@/assets/fonts/PT-Root-UI_Medium.ttf') format('opentype');
+  font-weight: 500; /* Полужирный */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('@/assets/fonts/PT-Root-UI_Light.ttf') format('opentype');
+  font-weight: 300; /* Светлый */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Root UI';
+  src: url('@/assets/fonts/PT-Root-UI_VF.ttf') format('opentype');
+  font-weight: normal; /* 400 или другой вес, если это вариативный шрифт */
+  font-style: normal; /* Укажите стиль, если это вариативный шрифт */
 }
